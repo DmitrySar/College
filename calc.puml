@@ -1,0 +1,19 @@
+@startuml
+class ConsoleReader {
+    + getRequest(): String
+}
+class RequestAnalizer {
+    + RequestAnalizer(ConsoleReader)
+    + getA(): double
+    + getB(): double
+    + getOperation(): String
+}
+class Calculator {
+    + main(String[])
+    + start()
+}
+
+ConsoleReader <--* RequestAnalizer
+RequestAnalizer <-- Calculator
+Calculator <-- Calculator
+@enduml
